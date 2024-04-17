@@ -256,18 +256,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         console.error(error);
       }
 
-      const stopAllButton = document.createElement('img');
-      stopAllButton.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="#ec5959" stroke="#b84848" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M4.3.5h5.4l3.8 3.8v5.4l-3.8 3.8H4.3L.5 9.7V4.3z"/></svg>');
-      stopAllButton.className = 'control-button stop-all-button';
-      stopAllButton.draggable = false;
-      stopAllButton.addEventListener('click', () => {
-        scaffolding.stopAll();
-      });
-      scaffolding.addControlButton({
-        element: stopAllButton,
-        where: 'top-left'
-      });
-
       vm.setTurboMode(false);
       if (vm.setInterpolation) vm.setInterpolation(false);
       if (vm.setFramerate) vm.setFramerate(60);
