@@ -1,0 +1,22 @@
+#first{
+	font-size:48px;
+	font-weight:700;
+	margin:30px auto;
+	text-align: center;
+}
+#second{
+	font-size:24px;
+	margin:10px auto;
+	text-align: center;
+}
+a{
+	display:block;
+	width:100px;
+	height:30px;
+	margin: 80px auto;
+	margin-bottom: 0px;
+	padding:5px 4px;
+	border:3px black solid;
+	font-size:24px;
+	text-align: center;
+}

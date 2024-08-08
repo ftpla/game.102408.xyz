@@ -1,0 +1,32 @@
+/* logo,搜索,一堆链接 */
+body{
+	background-color:#dedede;
+}
+.h-top{
+	height:50px;
+	background-color: #006400;
+	position: relative;
+}
+	.logo{
+		height: 50px;
+		margin-right:5px
+	}
+	.h-top-a-text{
+		color: white;
+		font-size: 20px;
+		margin:15px 8px;
+	}
+	.h-top-a-img{
+		height:30px;
+		margin:10px 6px;
+	}
+	.search-input{
+		width:200px;
+		height:20px;
+		margin:12px 0px 15px 15px;
+	}
+	.search-button{
+		width:30px;
+		height:20px;
+		margin:12px 15px 15px 0px;
+	}
