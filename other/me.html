@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人主页</title>
+		<style type="text/css">
+			.m_title{font-size:24px;margin:24px 0px;}
+			.l_title{font-size:32px;margin:32px 0px;color:#2ea0ef;}
+			.content{height:50px;}
+			.theme_bt,.color_bt{
+				width:50px;height:50px;
+				background-color:#808080;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				float:left;
+				margin-right: 5px;
+				color:#ffffff;
+				text-align: center;
+				font-size: 18px;
+				line-height: 46px;
+			}
+			.color_bt{background-size:50%;background-position: 100% 100%}
+			.theme_bt,.color_bt:hover{cursor: pointer;}
+			#bodyer{margin:16px;}
+			#theme_bt1{background-image:url(../img/logo/daytime.png);background-size:74%;}
+			#theme_bt2{background-image:url(../img/logo/night.png);background-size:60%;}
+		</style>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/fantun.css" />
+	</head>
+	<body>
+		<!-- 文档头部 -->
+		<iframe src="../header.html" width="100%" height="50" scrolling="no" frameborder="no"></iframe>
+		
+		<div id="bodyer">
+			
+			<!-- 大标题 -->
+			<div class="l_title" id="personalize_title">个性化</div>
+			
+			<!-- 中标题 -->
+			<div class="m_title" id="theme_title">主题(该功能暂时不可用)</div>
+			
+			<div class="content" id="theme">
+				<!-- 内含按钮 -->
+				<div class="theme_bt" id="theme_bt0">auto</div>
+				<div class="theme_bt" id="theme_bt1"></div>
+				<div class="theme_bt" id="theme_bt2"></div>
+			</div>
+			
+			<!-- 中标题 -->
+			<div class="m_title" id="color_title">颜色</div>
+			<div class="content" id="color">
+				<!-- 内含按钮 -->
+				<div class="color_bt" id="color_bt0"></div>
+				<div class="color_bt" id="color_bt1"></div>
+				<div class="color_bt" id="color_bt2"></div>
+				<div class="color_bt" id="color_bt3"></div>
+				<div class="color_bt" id="color_bt4"></div>
+				<div class="color_bt" id="color_bt5"></div>
+				<div class="color_bt" id="color_bt6"></div>
+				<div class="color_bt" id="color_bt7"></div>
+				<div class="color_bt" id="color_bt8"></div>
+				<div class="color_bt" id="color_bt9"></div>
+			</div>
+		</div>
+		
+		<div style="height:300px;"></div>
+		
+		<!-- 文档尾部 -->
+		<iframe src="../footer.html" width="100%" height="250" scrolling="no" frameborder="no"></iframe>
+	</body>
+	<script type="text/javascript">
+		
+		//第一次打开使用默认设置
+		
+		//创建一个空的、长度为按钮的数组
+		theme_bt=new Array(document.getElementById("theme").childElementCount);
+		color_bt=new Array(document.getElementById("color").childElementCount);
+		
+		// //遍历主题按钮
+		// for (let i = 0; i < theme_bt.length; i++) {
+		// 	theme_bt[i]=document.getElementById("theme_bt"+i);
+		// 	theme_bt[i].onclick=function(){
+		// 		window.localStorage.setItem("theme",i);
+		// 	}
+		// }
+		
+		//遍历颜色按钮
+		for (var i = 0; i < color_bt.length; i++) {
+			//获取元素
+			color_bt[i]=document.getElementById("color_bt"+i);
+			//设置按钮颜色
+			color_bt[i].style.backgroundColor="hsla("+(i*36)+",54%,30%,100%)";
+			//如果header颜色与自己的颜色相同
+			if (window.localStorage.getItem("color")==color_bt[i].style.backgroundColor) {
+				//给自己加上右下标
+				color_bt[i].style.backgroundImage="url(../img/logo/bt_select.png)"
+			}
+			//按钮点击事件
+			color_bt[i].onclick=function(){
+				//将header颜色设为自己的颜色
+				window.localStorage.setItem("color",this.style.backgroundColor);
+				//将所有元素的右下标清除
+				for (var i = 0; i < color_bt.length; i++) {
+					color_bt[i].style.backgroundImage="none";
+				}
+				//给自己加上右下标
+				this.style.backgroundImage="url(../img/logo/bt_select.png)";
+			}
+		}
+		
+	</script>
+</html>
