@@ -1,8 +1,5 @@
 /* logo,搜索,一堆链接 */
-body{
-	background-color:#dedede;
-}
-.h-top{
+#h-top{
 	height:50px;
 	background-color: #006400;
 	position: relative;
@@ -30,3 +27,29 @@ body{
 		height:20px;
 		margin:12px 15px 15px 0px;
 	}
+
+/* 网页底部内容 */
+#footer_img{
+	width:100%;
+	height:250px;
+	background:url("../img/background/footer.svg") no-repeat;
+	background-size:auto 230px;
+	background-position: 50% 50%;
+}
+#h-bottom{
+	width:1000px;
+	height:250px;
+	margin: 0px auto;
+	/* background-color: darkgreen; */
+}
+	.footer_menu{
+		width:160px;
+		height:200px;
+		margin:25px 20px;
+		/* background-color: darkblue; */
+	}
+		#footer_menu1{width:300px;}
+		#footer_menu4{width:220px;}
+	
+	.footer_menu .s_title{font-weight:700;line-height:32px;color:#808080}
+	.footer_menu h4{line-height:32px}
