@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>课程表</title>
+		<style type="text/css">
+			div{
+				font-size: 4vh;
+				height: 7vh;
+				text-align: center;
+			}
+			table{
+				border-collapse:collapse;
+				padding:0px;
+				width: 90vw;
+				margin:0px auto;
+			}
+			tr{
+				padding:0;
+			}
+			td{
+				width:12vw;
+				height:7vh;
+				border:2px solid black;
+				font-size:2.5vh;
+				text-align: center;
+				}
+			tr:first-child{background:#add8e6;}
+			td:first-child{background:#c1ef8f;}
+			#first{background:#ace6d3;}
+			#none{
+				height:2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>216班课程表</div>
+		<table>
+			<tr><td id="first">时间</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td></tr>
+			<tr><td>晨读</td><td>语文</td><td>语文</td><td>英语</td><td>历史</td><td>英语</td></tr>
+			<tr><td>1</td><td>语文</td><td>英语</td><td>英语</td><td>数学</td><td>语文</td></tr>
+			<tr><td>2</td><td>数学</td><td>物理</td><td>历史</td><td>化学</td><td>数学</td></tr>
+			<tr><td>3</td><td>英语</td><td>数学</td><td>作文</td><td>道法</td><td>体育</td></tr>
+			<tr><td>4</td><td>体育</td><td>化学</td><td>作文</td><td>物理</td><td>历史</td></tr>
+			<tr id="none"><tr>
+			<tr><td>5</td><td>化学</td><td>语文</td><td>道法</td><td>历史</td><td>英语</td></tr>
+			<tr><td>6</td><td>物理</td><td>道法</td><td>体育</td><td>语文</td><td>化学</td></tr>
+			<tr><td>7</td><td>周会</td><td>英语</td><td>数学</td><td>英语</td><td>物理</td></tr>
+			<tr><td>8</td><td>历史</td><td>物理</td><td>化学</td><td>数学</td><td>道法</td></tr>
+			<tr><td>9</td><td>道法</td><td>数学</td><td>物理</td><td>化学</td><td>数学</td></tr>
+		</table>
+	</body>
+</html>
