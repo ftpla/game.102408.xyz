@@ -4,16 +4,27 @@
 		<meta charset="utf-8">
 		<title>课程表</title>
 		<style type="text/css">
-			div{
+			#title{
 				font-size: 4vh;
 				height: 7vh;
 				text-align: center;
+			}
+			#print{
+				width:15vh;
+				height:5vh;
+				font-size:3vh;
+				margin:0px auto;
+				text-align: center;
+				line-height:5vh;
+			}
+			#print:hover{
+				cursor: pointer;
 			}
 			table{
 				border-collapse:collapse;
 				padding:0px;
 				width: 90vw;
-				margin:0px auto;
+				margin:1vh auto;
 			}
 			tr{
 				padding:0;
@@ -34,7 +45,7 @@
 		</style>
 	</head>
 	<body>
-		<div>216班课程表</div>
+		<div id="title">216班课程表</div>
 		<table>
 			<tr><td id="first">时间</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td></tr>
 			<tr><td>晨读</td><td>语文</td><td>语文</td><td>英语</td><td>历史</td><td>英语</td></tr>
@@ -49,5 +60,13 @@
 			<tr><td>8</td><td>历史</td><td>物理</td><td>化学</td><td>数学</td><td>道法</td></tr>
 			<tr><td>9</td><td>道法</td><td>数学</td><td>物理</td><td>化学</td><td>数学</td></tr>
 		</table>
+		<div id="print">点击打印</div>
 	</body>
+	<script type="text/javascript">
+		document.getElementById("print").onclick=function(){
+			this.style.display="none";
+			print();
+			this.style.display="block";
+		}
+	</script>
 </html>
