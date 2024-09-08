@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FANTUN</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/fantun.css" />
+	</head>
+	<body>
+		<!-- 文档头部 -->
+		<iframe src="../header.html" width="100%" height="50" scrolling="no" frameborder="no"></iframe>
+		
+		<!-- 文档中间 -->
+		<div id="game_box">
+			
+			<!-- 首行 -->
+			<div id="game_title">
+				<!-- 作品名称 -->
+				<h1 id="game_name"></h1>
+				<!-- 作者 -->
+				<div id="game_author">
+					<img src="../img/members/xxxhz1024.jpg"/>
+					<h3 id="game_author_name"></h3>
+				</div>
+				<!-- 作品推荐 -->
+				<h2 id="game_title_show">作品推荐</h2>
+			</div>
+			
+			<!-- 中间 -->
+			<div id="game_body">
+				<!-- 左侧标题、游玩窗口、按钮 -->
+				<div id="game_box_left">
+					
+					<!-- 作品游玩窗口 -->
+					<iframe id="game_window" src="" width="480" height="360" scrolling="no" frameborder="no">作品内容</iframe>
+					
+					<!-- 按钮 -->
+					<div class="button_set_box" id="zoom_large">
+						<img width="30" src="../img/icon/zoom_large.svg"/>
+						<div>放大</div>
+					</div>
+					
+					<div class="button_set_box" id="zoom_small">
+						<img width="30" src="../img/icon/zoom_small.svg"/>
+						<div>缩小</div>
+					</div>
+					
+					<div class="button_set_box" id="reload">
+						<img width="30" src="../img/icon/reload.svg"/>
+						<div>刷新</div>
+					</div>
+					
+				</div>
+				
+				<!--中间作品简介和操作说明-->
+				<div id="game_box_middle">
+					<h3>作品简介</h3>
+					<p id="game_pro"></p>
+					<h3>操作说明</h3>
+					<p id="game_explain"></p>
+				</div>
+				
+				<!-- 右边作品推荐内容 -->
+				<div id="game_box_right">
+					<img class="game_show_img"/><h4>作品</h4>
+					<img class="game_show_img"/><h4>作品</h4>
+					<img class="game_show_img"/><h4>作品</h4>
+				</div>
+				
+				<!-- 防止父元素高度塌陷 -->
+				<div style="clear: both;"></div>
+			</div>
+			
+		
+		</div>
+		
+		<!-- 文档尾部 -->
+		<iframe src="../footer.html" width="100%" height="250" scrolling="no" frameborder="no"></iframe>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/game.js"></script>
+	<script src="../js/game_load.js"></script>
+</html>
