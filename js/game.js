@@ -6,3 +6,4 @@ game[3]={name:"flappybird",url:"../games/flappybird/",img:"../img/games/flappybi
 game[4]={name:"五子棋beta",url:"../games/Gobang/",img:"../img/games/gobang.png",author:"小小小猴子",pro:"有bug",explain:"无",res:[480,410]};
 game[5]={name:"BMI计算器",url:"../games/BMI/",img:"../img/games/Unknown.png",author:"小小小猴子",pro:"scratch bmi计算器",explain:"bmi=身高(m)²/体重(kg)",res:[500,200]};
 game[6]={name:"216班课程表",url:"../other/classtable.html",img:"../img/games/Unknown.png",author:"小小小猴子",pro:"html+css做的课程表",explain:"有打印机的可以打印课程表",res:[480,500]};
+game[7]={name:"偶像练习生 篮球🏀",url:"../games/kun_basketball/",img:"../img/games/kun_basketball.png",author:"小小小猴子",pro:"666666",explain:"左右键操作，有三个道具",res:[480,360]};
