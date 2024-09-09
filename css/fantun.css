@@ -148,6 +148,7 @@ body{
 #game_window{
 	margin:20px 0;
 	display:block;
+	background-color:#ffffff;
 	border:5px solid #808080;
 	border-radius:10px;
 }
