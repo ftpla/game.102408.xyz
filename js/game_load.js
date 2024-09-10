@@ -67,8 +67,12 @@ bt_reload.onclick=刷新
 //右侧推荐栏
 show_img=document.getElementsByClassName("game_show_img");
 show_text=document.getElementById("game_box_right").getElementsByTagName("h4");
+show_list=[]
 for (var i = 0; i < show_img.length; i++) {
-	var cache=random(0,game.length-1);
+	//生成随机数并防止内容重复
+	do{var cache=random(0,game.length-1)}while(show_list.indexOf(cache)!=-1||cache==gameid);
+	show_list[show_list.length]=cache;
+	
 	show_img[i].src=game[cache].img;
 	show_text[i].innerText=game[cache].name;
 	//给跳转函数传入参数
