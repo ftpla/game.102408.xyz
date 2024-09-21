@@ -7,7 +7,7 @@ game[4]={name:"五子棋beta",time:"202409071440",url:"../games/Gobang/",img:"..
 game[5]={name:"BMI计算器",time:"202409071440",url:"../games/BMI/",img:"../img/games/Unknown.png",author:"小小小猴子",pro:"scratch bmi计算器",explain:"bmi=身高(m)²/体重(kg)",res:[500,200]};
 game[6]={name:"216班课程表",time:"202409071440",url:"../other/classtable.html",img:"../img/games/Unknown.png",author:"小小小猴子",pro:"html+css做的课程表",explain:"有打印机的可以打印课程表",res:[480,500]};
 game[7]={name:"偶像练习生 篮球🏀",time:"202409071440",url:"../games/kun_basketball/",img:"../img/games/kun_basketball.png",author:"小小小猴子",pro:"666666",explain:"左右键操作，有三个道具",res:[480,360]};
-game[8]={name:"贪吃蛇v2.75",time:"202409161947",url:"../games/potato/贪吃蛇v2.75.html",img:"../img/games/Unknown.png",author:"土豆江山",pro:"这是我的第一个作品",explain:"直接玩就行",res:[480,360]};
+game[8]={name:"贪吃蛇v2.75",time:"202409161947",url:"../games/potato/snakeV2.75.html",img:"../img/games/Unknown.png",author:"土豆江山",pro:"这是我的第一个作品",explain:"直接玩就行",res:[480,360]};
 
 function random(n,m){
 	return Math.floor(Math.random()*(m-n+1))+n;
