@@ -5,14 +5,43 @@
 		<title>丸辣</title>
 		<link rel="shortcut icon" href="img/title.png" type="image/x-icon">
 		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/404.css" />
-		<link rel="stylesheet" href="css/fantun.css" />
+		<style type="text/css">
+			#first{
+				font-size:48px;
+				font-weight:700;
+				margin:30px auto;
+				text-align: center;
+			}
+			#second{
+				font-size:24px;
+				margin:10px auto;
+				text-align: center;
+			}
+			a{
+				display:block;
+				width:100px;
+				height:30px;
+				margin: 80px auto;
+				margin-bottom: 0px;
+				padding:5px 4px;
+				border:3px black solid;
+				font-size:24px;
+				text-align: center;
+			}
+			#footer{
+				position: fixed;
+				bottom: 0;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- 文档头部 -->
 		<iframe src="header.html" width="100%" height="50" scrolling="no" frameborder="no"></iframe>
+		<!-- 文档中间 -->
 		<div id="first">404 Not Found</div>
 		<div id="second">项目不存在QAQ</div>
 		<a href="/">返回首页</a>
+		<!-- 文档尾部 -->
+		<iframe id="footer" src="footer.html" width="100%" height="250" scrolling="no" frameborder="no"></iframe>
 	</body>
 </html>

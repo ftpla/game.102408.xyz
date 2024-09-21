@@ -15,12 +15,25 @@
 				<a class="h-top-a-text block fl" href="https://old.102408.xyz" target="_blank">旧站</a>
 				<a class="h-top-a-text block fl" href="other/members.html" target="_top">成员</a>
 				<a class="h-top-a-text block fl" href="https://space.bilibili.com/53083150" target="_blank">bilibili</a>
-				<input type="text fl" class="search-input" placeholder="请输入">
-				<input type="button fl" class="search-button" value="搜索">
+				<input type="text" class="search-input fl" id="input" placeholder="输入作者/作品id"/>
+				<input type="button" class="search-button fl block" value="搜索"/>
 				<a class="block fr" href="other/me.html" target="_top" style="margin-right: 5px;"><img class="h-top-a-img" src="img/logo/user.png"></a>
 				<a class="block fr" href="https://turbowarp.org/editor" target="_blank"><img class="h-top-a-img" src="img/logo/tw.png"></a>
 		</div>
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/personalize_color.js"></script>
+	<script type="text/javascript">
+		
+		$("#h-top input[type='text']").attr("value",window.sessionStorage.getItem("search_value"));
+		window.sessionStorage.removeItem("search_value");
+		
+		$("#h-top input[type='button']").click(function(){
+			var a=document.getElementById("input").value;
+			if (a!=null){
+				window.sessionStorage.setItem("search_value",a);
+				window.open("other/search.html?value="+a);
+			}
+		});
+	</script>
 </html>
