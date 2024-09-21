@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>搜索结果</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/fantun.css" />
+		<style></style>
+	</head>
+	<body id="search">
+		<!-- 文档头部 -->
+		<iframe src="../header.html" width="100%" height="50" scrolling="no" frameborder="no"></iframe>
+		
+		<!-- 文档中间 -->	
+		<div id="search_box">
+			<!-- 搜索标题 -->
+			<h2 id="search_title"></h2>
+			<div id="search_author">
+				<h3>作者信息</h3>
+				<div>
+					<img/><!-- 作者头像 -->
+					<h2></h2><!-- 作者用户名 -->
+					<h4></h4><!-- 作者简介 -->
+				</div>
+			</div>
+			<div id="search_game">
+				<h3>作品信息</h3>
+				<div class="game_show_box"><img/><h4></h4><br /><h5></h5></div>
+			</div>
+		</div>
+		
+		<!-- 文档尾部 -->
+		<iframe src="../footer.html" width="100%" height="250" scrolling="no" frameborder="no"></iframe>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/author.js"></script>
+	<script src="../js/game.js"></script>
+	<script type="text/javascript">
+		const searchParams = new URLSearchParams(window.location.search);
+		//检测搜索内容是否为空
+		if (searchParams.get('value')==null||searchParams.get('value')==""){
+			location.href="../404.html";
+		}
+		search_value=searchParams.get('value')*1;
+		asv=author[search_value];
+		gsv=game[search_value];
+		
+		//设置搜索标题
+		$("#search_title").text("搜索id为"+search_value+"的内容是:")
+		
+		//设置作者头像、用户名、简介等
+		if(asv==undefined){
+			$("#search_box #search_author div").css("display","none")
+		}
+		else{
+			//头像
+			if(asv.img==undefined){
+				$("#search_box #search_author div img").attr("src","../img/logo/user.png");
+			}
+			else{
+				$("#search_box #search_author div img").attr("src",asv.img);
+			}
+			//用户名
+			$("#search_box #search_author div h2").text(asv.name);
+			//简介
+			if(asv.pro==undefined){
+				$("#search_box #search_author div h4").text("这个人很懒，什么都没有留下~");
+			}
+			else{
+				$("#search_box #search_author div h4").text(asv.pro);
+			}
+			//背景
+			if(asv.bg==undefined){
+				$("style").text("#search_box #search_author div::before{background-image:url(../img/background/author_bg/Winter.svg)}");
+			}
+			else{
+				$("style").text("#search_box #search_author div::before{background-image:url("+asv.bg+")}");
+			}
+		}
+		
+		//设置搜索作品
+		if(gsv==undefined){
+			$("#search_box #search_game div").css("display","none");
+		}
+		else{
+			function 加载作品(i,id){
+				
+				var img=$("#search_game img:eq("+i+")");
+				var name=$("#search_game h4:eq("+i+")");
+				var author=$("#search_game h5:eq("+i+")");
+				
+				img.attr("src",game[id].img);
+				name.text(game[id].name);
+				author.text(game[id].author);
+				
+				img.click(function(){window.open("../games/?gameid="+id)});
+				name.click(function(){window.open("../games/?gameid="+id)});
+				author.click(function(){});
+				
+			}
+			for (var i = 0; i < 10; i++) {
+				加载作品(0,search_value);
+			}
+		}
+		
+	</script>
+</html>
