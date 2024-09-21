@@ -34,9 +34,8 @@ game_box.style.width=game_box.offsetWidth+game_box_left.offsetWidth-500+"px";
 //介绍栏高度设定
 game_box_middle.style.height=30+game_window.offsetHeight+"px";
 
-function random(n,m){
-	return Math.floor(Math.random()*(m-n+1))+n;
-}
+//作者头像设定
+$("#game_author img").attr("src",author[(寻找作者id(game[gameid].author))].img);
 
 
 function 放大(){
