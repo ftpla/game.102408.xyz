@@ -1,4 +1,4 @@
-/* logo,搜索,一堆链接 */
+/* header 页眉 */
 body{
 	background-color:#dedede;
 }
@@ -26,12 +26,12 @@ body{
 		margin:12px 0px 15px 15px;
 	}
 	.search-button{
-		width:30px;
-		height:20px;
-		margin:12px 15px 15px 0px;
+		width:43px;
+		height:26px;
+		margin:12px 15px 15px 2px;
 	}
 
-/* 网页底部内容 */
+/* footer 页脚 */
 #footer_img{
 	width:100%;
 	height:250px;
@@ -153,6 +153,7 @@ body{
 	border-radius:10px;
 }
 .button_set_box{
+	display:block;
 	width:50px;
 	height:50px;
 	margin:0px 10px 20px 0px;
@@ -174,3 +175,102 @@ body{
 #game_introduction{
 	float:left;
 }
+
+/* 更多游戏界面 */
+#moregame #title{
+	font-size: 32px;
+	text-align: center;
+	line-height: 50px;
+}
+#game_genre_select_box{
+	height:30px;
+}
+	#game_genre_select_box #box1 div{
+		width:50px;
+		height:30px;
+		float: left;
+		background-color: #006400;
+	}
+#moregame_box{
+	width: max-content;
+	margin:10px auto;
+}
+	.game_show_box{
+		width:200px;
+		height: 180px;
+		margin:10px;
+		float: left;
+	}
+		.game_show_box img{
+			width:200px;
+			height:130px;
+			border-radius: 10px;
+		}
+		.game_show_box h4,h5{
+			display:inline-block;
+			line-height:1.5;
+		}
+		.game_show_box h5{
+			color:#404040;
+		}
+		.game_show_box *{
+			cursor: pointer;
+		}
+		.game_show_box img:hover{
+			filter:saturate(120%);
+		}
+		.game_show_box h4:hover{
+			text-decoration:underline;
+		}
+
+/* 搜索结果界面 */
+#search_box{
+	margin:30px;
+	height:500px;
+}
+	#search_box h3{
+		font-weight: 700;
+		line-height: 30px;
+		margin: 20px 0;
+	}
+	#search_box #search_author{
+		
+	}
+	#search_box #search_author div{
+		width:300px;
+		height:100px;
+		border: #808080 solid 3px;
+		border-radius: 10px;
+		position:relative;
+		padding:10px;
+		overflow:hidden;
+	}
+	#search_box #search_author div:hover{
+		cursor: pointer;
+	}
+	#search_box #search_author div::before{
+		content:"";
+		width:100%;height:100%;
+		filter: opacity(50%);
+		position: absolute;top:0;left:0;
+		z-index:-1;
+		background-position:center;
+		background-size: cover;
+	}
+	#search_box #search_author div img{
+		width:50px;
+		height:50px;
+		border-radius:50%;
+	}
+	#search_box #search_author div h2{
+		font-size:28px;
+		line-height: 50px;
+		margin-left: 10px;
+		display: inline-block;
+		position: absolute;
+		top:10px;
+	}
+	#search_box #search_author div h4{
+		margin-top:5px;
+		color: #404040;
+	}
