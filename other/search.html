@@ -35,6 +35,7 @@
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/author.js"></script>
 	<script src="../js/game.js"></script>
+	<script src="../js/moregame.js"></script>
 	<script type="text/javascript">
 		const searchParams = new URLSearchParams(window.location.search);
 		//检测搜索内容是否为空
@@ -83,21 +84,7 @@
 			$("#search_box #search_game div").css("display","none");
 		}
 		else{
-			function 加载作品(i,id){
-				
-				var img=$("#search_game img:eq("+i+")");
-				var name=$("#search_game h4:eq("+i+")");
-				var author=$("#search_game h5:eq("+i+")");
-				
-				img.attr("src",game[id].img);
-				name.text(game[id].name);
-				author.text(game[id].author);
-				
-				img.click(function(){window.open("../games/?gameid="+id)});
-				name.click(function(){window.open("../games/?gameid="+id)});
-				author.click(function(){});
-				
-			}
+			
 			for (var i = 0; i < 10; i++) {
 				加载作品(0,search_value);
 			}

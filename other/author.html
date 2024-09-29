@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/fantun.css" />
+	</head>
+	<body id="author">
+		<!-- 文档头部 -->
+		<iframe src="../header.html" width="100%" height="50" scrolling="no" frameborder="no"></iframe>
+		
+		<!-- 文档中部 -->
+		<div id="author_box">
+			<div class="author_box_top">
+				<img alt="头像"/>
+				<div type="box">
+					<div type="top">
+						<h1 type="author_name"></h1>
+						<!-- 此处还可以放作者的标签 -->
+					</div>
+					<div class="pro"></div>
+					<div type="bottom">
+						<!-- 此处可放作者的社交平台超链接 -->
+					</div>
+				</div>
+			</div>
+			<h2 type="title">项目作品</h2>
+			<div class="author_box_bottom"></div>
+		</div>
+		
+		<!-- 文档尾部 -->
+		<iframe src="../footer.html" width="100%" height="250" scrolling="no" frameborder="no"></iframe>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/author.js"></script>
+	<script src="../js/game.js"></script>
+	<script src="../js/moregame.js"></script>
+	<script type="text/javascript">
+		
+		//获取url传参
+		const searchParams = new URLSearchParams(window.location.search);
+		authorid=searchParams.get('id')*1;
+		asv=author[authorid];
+		
+		//加载作者的作品
+		var author_box_bottom="";
+		
+		for (var i = 0; i < 寻找作者的作品id(authorid).length; i++) {
+			author_box_bottom+="<div class='game_show_box'><img/><h4></h4><br /><h5></h5></div>"	
+		}
+		
+		$(".author_box_bottom").html(author_box_bottom);
+		
+		for (var i = 0; i < 寻找作者的作品id(authorid).length; i++) {
+			加载作品(i,寻找作者的作品id(authorid)[i]);
+		}
+		
+		//设值
+		$("#author_box>.author_box_top>div>div>h1").text(asv.name);
+		if(asv.pro==undefined){
+			$("#author_box>.author_box_top>div>.pro").text("这个人很懒，什么都没有留下").css("color","#404040");
+		}
+		else{
+			$("#author_box>.author_box_top>div>.pro").text(asv.pro);
+		}
+		$("#author_box>.author_box_top>img").attr("src",asv.img);
+		
+		//标签
+		if(asv.tag!=undefined){
+			for (var i = 0; i < asv.tag.length; i++) {
+				$("#author_box>.author_box_top>div[type=box]>div[type=top]").append("<div class='tag'>"+asv.tag[i]+"</div>");
+			}
+		}
+		
+		//社交帐号
+		if(asv.url!=undefined){
+			
+			var a=$("#author_box>.author_box_top>div[type=box]>div[type=bottom]");
+			
+			for(i in asv.url){
+				switch(i){
+					case "bilibili":
+						a.append("<a class='social' type='bilibili' href="+asv.url[i]+" target='_blank'></a>");
+						break;
+					default:
+						a.append("<a class='social' type='default' href='x_is_y.html?x="+i+"&y="+asv.url[i]+"' target='_blank'>"+i+"</a>");
+				}
+			}
+		}
+		
+	</script>
+</html>
