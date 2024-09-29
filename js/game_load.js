@@ -20,7 +20,7 @@ gameid=searchParams.get('gameid')*1
 
 //设值
 game_name.innerText=game[gameid].name;
-game_author_name.innerText=game[gameid].author;
+game_author_name.innerText=author[game[gameid].author].name;
 game_pro.innerHTML=game[gameid].pro;
 game_explain.innerHTML=game[gameid].explain;
 
@@ -35,8 +35,12 @@ game_box.style.width=game_box.offsetWidth+game_box_left.offsetWidth-500+"px";
 game_box_middle.style.height=30+game_window.offsetHeight+"px";
 
 //作者头像设定
-$("#game_author img").attr("src",author[(寻找作者id(game[gameid].author))].img);
+$("#game_author img").attr("src",author[game[gameid].author].img);
 
+//链接作者
+$("#game_author img,#game_author_name").click(function(){
+	window.open("../other/author.html?id="+game[gameid].author);
+})
 
 function 放大(){
 	game_box.style.width=game_box.offsetWidth+game_window.width*0.25+"px";
