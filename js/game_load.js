@@ -19,10 +19,21 @@ const searchParams = new URLSearchParams(window.location.search);
 gameid=searchParams.get('gameid')*1
 
 //设值
+$("title").text(game[gameid].name+" | "+author[game[gameid].author].name+" | 饭团工作室 | FANTUN");
 game_name.innerText=game[gameid].name;
-game_author_name.innerText=author[game[gameid].author].name;
+game_author_name.innerText=game[gameid].name;
 game_pro.innerHTML=game[gameid].pro;
 game_explain.innerHTML=game[gameid].explain;
+
+//添加meta标签
+function addMeta(name,content){
+	var meta=document.createElement("meta");
+	meta.name=name;
+	meta.content=content;
+	document.getElementsByTagName("head")[0].appendChild(meta);
+}
+addMeta("keywords",game[gameid].name);
+addMeta("description",game[gameid].pro);
 
 //游戏窗口设定
 game_window.src=game[gameid].url;
