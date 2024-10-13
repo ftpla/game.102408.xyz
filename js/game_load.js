@@ -21,7 +21,7 @@ gameid=searchParams.get('gameid')*1
 //设值
 $("title").text(game[gameid].name+" | "+author[game[gameid].author].name+" | 饭团工作室 | FANTUN");
 game_name.innerText=game[gameid].name;
-game_author_name.innerText=game[gameid].name;
+game_author_name.innerText=author[game[gameid].author].name;
 game_pro.innerHTML=game[gameid].pro;
 game_explain.innerHTML=game[gameid].explain;
 
