@@ -54,6 +54,8 @@
 			$("#search_box #search_author div").css("display","none")
 		}
 		else{
+			//跳转
+			$("#search_box #search_author div").click(function(){location.href="author.html?id="+search_value})
 			//头像
 			if(asv.img==undefined){
 				$("#search_box #search_author div img").attr("src","../img/logo/user.png");
