@@ -17,12 +17,66 @@
 		<link rel="shortcut icon" href="img/logo/title.png" type="image/x-icon">
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/fantun.css" />
+		<style type="text/css">
+			.title{
+				margin-top:32px;
+				height:50px;
+				font-size:50px;
+				text-align:center;
+			}
+			.a0{
+				width:880px;
+				height:450px;
+				background:none;
+				margin:50px auto;
+			}
+			.a{
+				background:#ffa500;
+				float:left;
+				margin:0px 10px 10px 0px;
+				text-align:center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				font-size: 25px;
+				filter:blur(0.1px)opacity(80%);
+			}
+			
+			.a1{
+				width:200px;
+				height:300px;
+			}
+			.a2{
+				width:200px;
+				height:145px;
+			}
+			.a:hover{
+				cursor:pointer;
+				background:#b8860b;
+				filter:opacity(100%);
+			}
+			li{color: #000000;}
+			a:link{
+				color: #000000;
+			}
+			a:visited{
+				color: #000000;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- 文档头部 -->
 		<iframe src="header.html" width="100%" height="50" scrolling="no" frameborder="0"></iframe>
-		<!-- 文档中间 -->
-		<iframe src="main.html" width="100%" height="90%" scrolling="no" frameborder="0"></iframe>
+		
+		<h1 class="title">饭团网v1.0正式版</h1>
+		<ul class="a0" style="list-style-type: none;">
+			<a href="games/?gameid=0" target="_blank"><li class="a1 a"style="background:url(img/games/minesweeper.png) no-repeat left/cover">扫雷</li></a>
+			<a href="games/?gameid=1" target="_blank"><li class="a1 a"style="background:url(img/games/parkour_editor.png) no-repeat left/cover">方块跑酷引擎</li></a>
+			<a href="games/?gameid=2" target="_blank"><li class="a2 a"style="background:url(img/games/mario.png) no-repeat left/cover">马里奥编辑器</li></a>
+			<a href="games/?gameid=3" target="_blank"><li class="a2 a"style="background:url(img/games/flappybird.png) no-repeat left/cover">flappybird</li></a>
+			<a href="games/?gameid=4" target="_blank"><li class="a2 a"style="background:url(img/games/gobang.png) no-repeat left/cover">五子棋beta</li></a>
+			<a href="other/moregame.html" target="_blank"><li class="a2 a">更多游戏…</li></a>
+		</ul>
 		<!-- 文档尾部 -->
 		<iframe src="footer.html" width="100%" height="250" scrolling="no" frameborder="0"></iframe>
 	</body>
