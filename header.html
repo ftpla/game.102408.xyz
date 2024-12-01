@@ -6,11 +6,16 @@
 		<link rel="shortcut icon" href="img/logo/title.png" type="image/x-icon">
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/fantun.css" />
+		<style>
+			body{
+				background-color: #00000000;
+			}
+		</style>
 	</head>
 	<body>
 		<div>
 			<div id="h-top">
-				<a class="block fl" href="/" target="_top"><img class="logo" src="img/logo/FANTUN.png"/></a>
+				<a class="block fl" href="/" target="_top"><div class="logo"></div></a>
 				<a class="h-top-a-text block fl" href="/" target="_top">首页</a>
 				<a class="h-top-a-text block fl" href="https://old.102408.xyz" target="_blank">旧站</a>
 				<a class="h-top-a-text block fl" href="other/members.html" target="_top">成员</a>
@@ -21,6 +26,11 @@
 				<a class="block fr" href="https://turbowarp.org/editor" target="_blank"><img class="h-top-a-img" src="img/logo/tw.png"></a>
 		</div>
 	</body>
+	<script type="text/javascript">
+		//header模式设置
+		const searchParams = new URLSearchParams(window.location.search);
+		mode=searchParams.get('mode');
+	</script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/personalize_color.js"></script>
 	<script type="text/javascript">
@@ -30,7 +40,7 @@
 		
 		$("#h-top input[type='button']").click(function(){
 			var a=document.getElementById("input").value;
-			if (a!=null){
+			if (a!=null&&a!=""){
 				window.sessionStorage.setItem("search_value",a);
 				window.open("other/search.html?value="+a);
 			}
