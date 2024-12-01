@@ -8,8 +8,8 @@ function 加载作品(i,id){
 	name.text(game[id].name);
 	authorname.text(author[game[id].author].name);
 	
-	img.click(function(){window.open("../games/?gameid="+id)});
-	name.click(function(){window.open("../games/?gameid="+id)});
+	img.click(function(){window.location.href="../games/?gameid="+id});
+	name.click(function(){window.location.href="../games/?gameid="+id});
 	authorname.click(function(){window.open("../other/author.html?id="+game[id].author)});
 	
 }
