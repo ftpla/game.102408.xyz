@@ -4,32 +4,52 @@ body{
 }
 #h-top{
 	height:50px;
-	background-color: #006400;
 	position: relative;
 }
 	.logo{
+		display: block;
+		width: 175px;
 		height: 50px;
-		margin-right:5px
+		margin-right:5px;
+		background-image: url(../img/logo/title.svg);
+		background-repeat:no-repeat;
+		background-position: center;
+		background-size:83%;
 	}
 	.h-top-a-text{
 		color: white;
 		font-size: 20px;
-		margin:15px 8px;
-	}
+		margin:15px 8px 0px 8px;
+		transition-property: all;
+		transition-duration: 300ms;
+	}.h-top-a-text:hover{color: #c6ebeb;}
 	.h-top-a-img{
 		height:30px;
 		margin:10px 6px;
 	}
 	.search-input{
-		width:200px;
-		height:20px;
+		width:150px;
+		height:25px;
+		background-color: #eaeaea;
 		margin:12px 0px 15px 15px;
-	}
+		padding-left: 5px;
+		border:none;
+		border-radius:10px 0px 0px 10px;
+		outline: none;
+		transition-duration: 400ms;
+		transition-delay: 100ms;
+	}.search-input:focus{width:200px;background-color: #fff;}
 	.search-button{
 		width:43px;
-		height:26px;
-		margin:12px 15px 15px 2px;
-	}
+		height:27px;
+		margin:12px 15px 15px 0px;
+		border:none;
+		border-radius: 0px 10px 10px 0px;
+		background-color: #9acd32;
+		color: #ffffff;
+		font-weight: 700;
+		transition-duration: 300ms;
+	}.search-button:hover{cursor: pointer;background-color: #93be2d;}
 
 /* footer 页脚 */
 #footer_img{
@@ -144,10 +164,11 @@ body{
 		display:block;
 		line-height:32px;
 		text-align: center;
+		transition-duration:300ms; 
 	}
 	#game_box_right .game_show_img,#game_box_right h4:hover{
 		cursor: pointer;
-		text-decoration: underline;
+		color: #037291;
 	}
 #game_window{
 	margin:20px 0;
@@ -164,8 +185,11 @@ body{
 	background-color: skyblue;
 	float: left;
 	border-radius:5px;
+	box-shadow: 1px 1px 2px #80808050;
+	transition-property: all;
+	transition-duration: 300ms;
 }
-.button_set_box:hover{cursor:pointer}
+.button_set_box:hover{cursor:pointer;background-color:#77c7eb;width:52px;height:52px;margin-bottom:18px;box-shadow: 3px 3px 2px #80808050;}
 	.button_set_box img{
 		display: block;
 		width:25px;
@@ -209,10 +233,12 @@ body{
 			width:200px;
 			height:130px;
 			border-radius: 10px;
+			transition-duration: 300ms;
 		}
 		.game_show_box h4,h5{
 			display:inline-block;
 			line-height:1.5;
+			transition-duration: 200ms;
 		}
 		.game_show_box h5{
 			color:#404040;
@@ -222,9 +248,15 @@ body{
 		}
 		.game_show_box img:hover{
 			filter:saturate(120%);
+			width:208px;
+			height:136px;
+			margin:-3px 10px 0px -4px;
 		}
 		.game_show_box h4:hover{
-			text-decoration:underline;
+			color:#037291;
+		}
+		.game_show_box h5:hover{
+			color: #d38e04;
 		}
 
 /* 搜索结果界面 */
